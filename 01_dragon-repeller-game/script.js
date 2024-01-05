@@ -34,6 +34,9 @@ function goStore() {
     button2.onclick = buyWeapon;
     button3.onclick = goTown;
 
+    //set innertext text
+    text.innerText = "You enter the store.";
+
 }
 
 function goCave() {
