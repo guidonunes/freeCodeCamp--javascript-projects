@@ -24,6 +24,11 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 
 //initialize buttons
 
+function update(location) {
+    
+}
+
+
 function goTown() {
     button1.innerText = "Go to store";
     button2.innerText = "Go to cave";
@@ -35,7 +40,7 @@ function goTown() {
     button3.onclick = fightDragon;
 
     //set innertext text
-    text.innerText = "You are in the town square. You see a sign that says Store.";
+    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
 
 }
 
