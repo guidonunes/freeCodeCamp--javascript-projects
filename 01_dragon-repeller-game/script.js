@@ -41,8 +41,8 @@ const locations = [
 
 function update(location) {
     button1.innerText = location["button text"][0];
-    button2.innerText = "Go to cave";
-    button3.innerText = "Fight dragon";
+    button2.innerText = location["button text"][1];
+    button3.innerText = location["button text"][2];
 
     //set onclick property for each button
     button1.onclick = goStore;
