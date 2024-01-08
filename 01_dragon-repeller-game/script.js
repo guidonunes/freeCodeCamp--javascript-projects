@@ -167,6 +167,9 @@ function fightDragon() {
     console.log("Fighting dragon.");
 }
 
+function goFight(){
+
+}
 
 button1.onclick = goStore;
 button2.onclick = goCave;
