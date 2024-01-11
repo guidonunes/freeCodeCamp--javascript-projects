@@ -76,11 +76,11 @@ const locations = [
     "button functions": [restart, restart, restart],
     text: "You die. ☠️"
   },
-  {
-    name: "win",
-    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
-    "button functions": [restart, restart, restart],
-    text: "You defeat the dragon! YOU WIN THE GAME! 🎉"
+  { 
+    name: "win", 
+    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"], 
+    "button functions": [restart, restart, restart], 
+    text: "You defeat the dragon! YOU WIN THE GAME! 🎉" 
   }
 ];
 
@@ -208,20 +208,18 @@ function lose() {
   update(locations[5]);
 }
 
-function winGame () {
+function winGame() {
   update(locations[6]);
 }
 
-function restart () {
+function restart() {
   xp = 0;
   health = 100;
   gold = 50;
   currentWeapon = 0;
   inventory = ["stick"];
-
-  goldText.innerText = goldText;
-  healthText.innerText = healthText;
-  xpText.innerText = xpText;
-
+  goldText.innerText = gold;
+  healthText.innerText = health;
+  xpText.innerText = xp;
   goTown();
 }
