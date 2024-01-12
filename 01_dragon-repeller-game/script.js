@@ -272,4 +272,9 @@ function pick(guess) {
   for (let i = 0; i < 10; i++) {
     text.innerText += numbers[i] + "\n";
   }
+  if(numbers.includes(guess)) {
+    text.innerText += "Right! You win 20 gold!";
+    gold += 20;
+    goldText.innerText = gold;
+  }
 }
