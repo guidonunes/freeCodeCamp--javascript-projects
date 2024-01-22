@@ -28,6 +28,8 @@ function addEntry() {
     targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
 
+
+
 function getCaloriesFromInputs(list) {
     let calories = 0;
     for(let i = 0; i < list.length; i++){
@@ -40,6 +42,7 @@ function getCaloriesFromInputs(list) {
         }
         calories += Number(currVal);
     }
+    return calories;
 }
 
 
