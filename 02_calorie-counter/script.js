@@ -86,6 +86,7 @@ function clearForm() {
         inputContainers[i].innerHTML = '';
     }
     budgetNumberInput.value = "";
+    output.innerText = "";
 }
 
 
