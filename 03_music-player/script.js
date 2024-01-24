@@ -62,4 +62,11 @@ const allSongs = [
         duration: "3:52",
         src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cant-stop-me-cant-even-slow-me-down.mp3",
       },
+      {
+        id: 8,
+        title: "The Surest Way Out is Through",
+        artist: "Quincy Larson",
+        duration: "3:10",
+        src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/the-surest-way-out-is-through.mp3",
+      },
 ];
