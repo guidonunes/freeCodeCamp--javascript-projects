@@ -41,4 +41,11 @@ const allSongs = [
         duration: "3:35",
         src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/never-not-favored.mp3",
       },
+      {
+        id: 5,
+        title: "From the Ground Up",
+        artist: "Quincy Larson",
+        duration: "3:12",
+        src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/from-the-ground-up.mp3",
+      },
 ];
