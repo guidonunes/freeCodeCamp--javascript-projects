@@ -102,5 +102,5 @@ const renderSongs = (array) => {
           </svg>
       </button>
         `
-      });
+      }).join('');
 }
