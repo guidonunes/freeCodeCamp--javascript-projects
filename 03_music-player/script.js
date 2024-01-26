@@ -95,6 +95,7 @@ const song = userData?.songs.find((song) => song.id === id);
   } else {
     audio.currentTime = userData.songCurrentTime;
   }
+  userData.currentSong = song;
 }
 
 const renderSongs = (array) => {
