@@ -128,6 +128,10 @@ const renderSongs = (array) => {
       playlistSongs.innerHTML = songsHTML;
 };
 
+const getCurrentSongIndex = () => {
+  
+}
+
 playButton.addEventListener('click', () => {
   if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id)
@@ -136,6 +140,6 @@ playButton.addEventListener('click', () => {
   }
 })
 
-pauseButton.addEventListener('click', pauseSong)
+pauseButton.addEventListener('click', pauseSong);
 
 renderSongs(userData?.songs);
