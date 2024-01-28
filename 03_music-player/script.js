@@ -102,7 +102,9 @@ const song = userData?.songs.find((song) => song.id === id);
 };
 
 const pauseSong = () => {
-  
+      userData.songCurrentTime = audio.currentTime;
+      playButton.classList.remove("playing");
+      audio.pause();
 }
 
 const renderSongs = (array) => {
