@@ -99,6 +99,10 @@ const song = userData?.songs.find((song) => song.id === id);
   
   playButton.classList.add("playing");
   audio.play()
+};
+
+const pauseSong = () => {
+  
 }
 
 const renderSongs = (array) => {
