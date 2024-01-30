@@ -164,7 +164,10 @@ userData?.songs.sort((a, b) => {
   if(a.title < b.title) {
     return -1;
   }
-})
+  if(a.title > b.title) {
+    return 1;
+  }
+});
 
 const getCurrentSongIndex = () => {
   return userData?.songs.indexOf(userData.currentSong);
