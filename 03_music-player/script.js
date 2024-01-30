@@ -160,15 +160,6 @@ const renderSongs = (array) => {
       playlistSongs.innerHTML = songsHTML;
 };
 
-userData?.songs.sort((a, b) => {
-  if(a.title < b.title) {
-    return -1;
-  }
-  if(a.title > b.title) {
-    return 1;
-  }
-    return 0;
-});
 
 const getCurrentSongIndex = () => {
   return userData?.songs.indexOf(userData.currentSong);
@@ -185,4 +176,15 @@ playButton.addEventListener('click', () => {
 pauseButton.addEventListener('click', pauseSong);
 nextButton.addEventListener('click', playNextSong);
 previousButton.addEventListener('click', playPreviousSong);
+
+userData?.songs.sort((a, b) => {
+  if(a.title < b.title) {
+    return -1;
+  }
+  if(a.title > b.title) {
+    return 1;
+  }
+    return 0;
+});
+
 renderSongs(userData?.songs);
