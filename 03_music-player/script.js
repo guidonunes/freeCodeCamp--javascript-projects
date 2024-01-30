@@ -160,6 +160,7 @@ const renderSongs = (array) => {
       playlistSongs.innerHTML = songsHTML;
 };
 
+
 const getCurrentSongIndex = () => {
   return userData?.songs.indexOf(userData.currentSong);
 }
@@ -176,3 +177,4 @@ pauseButton.addEventListener('click', pauseSong);
 nextButton.addEventListener('click', playNextSong);
 previousButton.addEventListener('click', playPreviousSong);
 renderSongs(userData?.songs);
+userData?.songs.sort()
