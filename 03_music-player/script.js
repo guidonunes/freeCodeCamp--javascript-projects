@@ -175,7 +175,7 @@ const renderSongs = (array) => {
 };
 
 const setPlayButtonAccessibleText = () => {
-  
+  const song = userData?.currentSong || userData?.songs[0];
 }
 
 const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
