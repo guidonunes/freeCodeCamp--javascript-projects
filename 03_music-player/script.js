@@ -100,6 +100,7 @@ const song = userData?.songs.find((song) => song.id === id);
   playButton.classList.add("playing");
   highlightCurrentSong();
   setPlayerDisplay();
+  setPlayButtonAccessibleText();
   audio.play()
 };
 
