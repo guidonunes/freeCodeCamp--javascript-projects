@@ -152,6 +152,10 @@ const deleteSong =(id) => {
   highlightCurrentSong();
   setPlayButtonAccessibleText();
 
+  if(userData?.songs.length === 0) {
+    
+  }
+
 }
 
 const setPlayerDisplay = () => {
