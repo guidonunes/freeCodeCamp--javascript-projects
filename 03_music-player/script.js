@@ -222,6 +222,9 @@ audio.addEventListener("ended", () => {
 
   if (nextSongExists) {
     playNextSong();
+  } else {
+    userData.currentSong = null;
+    userData.songCurrentTime = 0; 
   }
 });
 
