@@ -145,6 +145,7 @@ const deleteSong =(id) => {
   renderSongs(userData?.songs);
   highlightCurrentSong();
   setPlayButtonAccessibleText();
+
 }
 
 const setPlayerDisplay = () => {
