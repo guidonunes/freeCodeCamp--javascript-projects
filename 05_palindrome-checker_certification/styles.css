@@ -1,4 +1,15 @@
 body {
     font-family: 'Changa', sans-serif;
-    background-color: #e9ecef;;
+    background-color: #e9ecef;
 }
+
+.main-card {
+    background-color: #fff;
+    color:  #343a40;
+    padding: 25px 45px 50px 45px;
+    text-align: center;
+    margin: 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.2);
+    border: 1px solid #EAEAEA;
+  }
