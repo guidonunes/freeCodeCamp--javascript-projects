@@ -8,7 +8,7 @@ body {
     color:  #343a40;
     padding: 100px 45px 100px 45px;
     text-align: center;
-    margin: 25px auto;
+    margin: 125px 250px 25px 250px;
     border-radius: 15px;
     box-shadow: 0 0 16px rgba(0,0,0,0.2);
     border: 1px solid #EAEAEA;
@@ -22,4 +22,3 @@ body {
     padding-left: 10px;
   }
 
-  
