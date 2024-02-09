@@ -22,3 +22,12 @@ body {
     padding-left: 10px;
   }
 
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -75px;
+    font-size: 38px;
+    color:#393e46;
+}
+
+/*TODO: add styling to check-btn*/
