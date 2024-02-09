@@ -6,10 +6,20 @@ body {
 .main-card {
     background-color: #fff;
     color:  #343a40;
-    padding: 25px 45px 50px 45px;
+    padding: 100px 45px 100px 45px;
     text-align: center;
     margin: 25px auto;
     border-radius: 15px;
     box-shadow: 0 0 16px rgba(0,0,0,0.2);
     border: 1px solid #EAEAEA;
   }
+
+  #text-input {
+    border-radius: 15px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    width: 350px;
+    height: 25px;
+    padding-left: 10px;
+  }
+
+  
