@@ -5,7 +5,8 @@ body {
 
 .input-card {
     background-color: #1b1b32;
-    color:  #343a40;
+    color:  #EAEAEA;
+    font-size: 18px;
     padding: 100px 25px 100px 25px;
     text-align: center;
     margin: 125px 250px 25px 250px;
