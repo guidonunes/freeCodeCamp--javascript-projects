@@ -15,7 +15,8 @@ body {
 
   #text-input {
     border-radius: 15px;
-    width: 350px;
+    width: calc(100% - 20px); /* Adjusted width relative to .input-card */
+    max-width: 350px;
     font-size: 14px;
     height: 35px;
     padding-left: 10px;
