@@ -6,7 +6,7 @@ body {
 .input-card {
     background-color: #1b1b32;
     color:  #343a40;
-    padding: 100px 45px 100px 45px;
+    padding: 100px 25px 100px 25px;
     text-align: center;
     margin: 125px 250px 25px 250px;
     border-radius: 15px;
@@ -15,7 +15,7 @@ body {
 
   #text-input {
     border-radius: 15px;
-    width: calc(100% - 20px); /* Adjusted width relative to .input-card */
+    width: calc(100% - 30px); /* Adjusted width relative to .input-card */
     max-width: 350px;
     font-size: 14px;
     height: 35px;
