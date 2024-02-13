@@ -17,3 +17,5 @@ checkBtn.addEventListener('click', () => {
         }
     }
 });
+
+//TODO: research palindrome logic to implement
