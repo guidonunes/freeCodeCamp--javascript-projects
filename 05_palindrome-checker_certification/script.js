@@ -7,12 +7,12 @@ const result = document.getElementById('result');
 function isPalindrome(str) {
     const alphanumericStr = str.replace(/[\W_]/g, '').toLowerCase();
     const reversedStr = alphanumericStr.split('').reverse().join('');
-    
+    return alphanumericStr === reversedStr;
 }
 
 
 
-
+// Add event listener to the checkBtn
 checkBtn.addEventListener('click', () => {
     const inputValue = textInput.value.trim().toLowerCase();
 
