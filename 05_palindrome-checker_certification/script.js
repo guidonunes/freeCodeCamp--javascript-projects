@@ -1,6 +1,5 @@
 const textInput = document.getElementById('text-input');
 const checkBtn = document.getElementById('check-btn');
-const refreshBtn = document.getElementById('refresh-btn');
 const result = document.getElementById('result');
 
 
@@ -14,7 +13,9 @@ function isPalindrome(str) {
 
 
 // Add event listener to the checkBtn
-checkBtn.addEventListener('click', () => {
+checkBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+
     const inputValue = textInput.value.trim().toLowerCase();
 
     if(inputValue === '') {
