@@ -1,5 +1,6 @@
 const textInput = document.getElementById('text-input');
 const checkBtn = document.getElementById('check-btn');
+const refreshBtn = document.getElementById('refresh-btn');
 const result = document.getElementById('result');
 
 
@@ -27,5 +28,7 @@ checkBtn.addEventListener('click', () => {
     } else {
         result.textContent = inputValue + ' is not a palindrome';
     }
+
+    textInput.value = '';
 });
 
