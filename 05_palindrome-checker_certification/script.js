@@ -2,20 +2,28 @@ const textInput = document.getElementById('text-input');
 const checkBtn = document.getElementById('check-btn');
 const result = document.getElementById('result');
 
+
+// Define the isPalindrome function
+function isPalindrome(str) {
+    
+}
+
+
+
+
 checkBtn.addEventListener('click', () => {
-    if(textInput.value.trim() === '') {
-        alert('Please input a value')
+    const inputValue = textInput.value.trim().toLowerCase();
+
+    if(inputValue === '') {
+        alert('Please input a value');
+        return;
+     }
+
+    // Check if the input value is a palindrome
+    if(isPalindrome(inputValue)) {
+        result.textContent = inputValue + ' is a palindrome';
     } else {
-        const inputValue = textInput.value.trim().toLowerCase();
-        switch (inputValue) {
-            case 'a':
-                result.textContent = 'A is a palindrome';
-                break;
-            default:
-                result.textContent = '';
-                break;
-        }
+        result.textContent = inputValue + ' is not a palindrome';
     }
 });
 
-//TODO: research palindrome logic to implement
