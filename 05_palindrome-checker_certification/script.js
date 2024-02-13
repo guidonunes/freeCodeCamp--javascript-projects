@@ -6,6 +6,8 @@ const result = document.getElementById('result');
 // Define the isPalindrome function
 function isPalindrome(str) {
     const alphanumericStr = str.replace(/[\W_]/g, '').toLowerCase();
+    const reversedStr = alphanumericStr.split('').reverse().join('');
+    
 }
 
 
