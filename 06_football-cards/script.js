@@ -178,3 +178,4 @@ const {sport, team, year, players} = myFavoriteFootballTeam;
 const {headCoach: {coachName}} = myFavoriteFootballTeam;
 typeOfSport.textContent = sport;
 teamName.textContent = team;
+worldCupYear.textContent = year;
