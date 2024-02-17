@@ -57,4 +57,5 @@ taskForm.addEventListener('submit', (e) => {
         <button type="button" class="btn">Delete</button>
         `;
     }); 
+    taskForm.classList.toggle('hidden');
 });
