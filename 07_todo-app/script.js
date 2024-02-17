@@ -43,3 +43,7 @@ const taskObj = {
     date: dateInput.value,
     description: descriptionInput.value,
 };
+
+if (dataArrIndex === -1) {
+    taskData.unshift(taskObj);
+}
