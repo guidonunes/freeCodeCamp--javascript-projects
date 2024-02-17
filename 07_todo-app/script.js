@@ -15,7 +15,14 @@ let currentTask = {
 
 };
 
-const reset = () => {}
+const reset = () => {
+    titleInput.value = '';
+    dateInput.value = '';
+    descriptionInput.value = '';
+
+    taskForm.classList.toggle('hidden');
+    currentTask = {};
+}
 
 openTaskFormBtn.addEventListener('click', () => {
     taskForm.classList.toggle('hidden');
