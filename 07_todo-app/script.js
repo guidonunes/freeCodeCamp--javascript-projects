@@ -15,6 +15,8 @@ let currentTask = {
 
 };
 
+const reset = () => {}
+
 openTaskFormBtn.addEventListener('click', () => {
     taskForm.classList.toggle('hidden');
 });
