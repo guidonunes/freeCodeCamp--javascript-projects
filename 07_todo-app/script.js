@@ -11,9 +11,37 @@ const dateInput = document.getElementById('date-input');
 const descriptionInput = document.getElementById('description-input');
 
 const taskData = [];
-let currentTask = {
+let currentTask = {};
 
-};
+const addOrUpdateTask = () => {
+    const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+    const taskObj = {
+        id: `${titleInput.value.toLowerCase().split(' ').join('-')}-${Date.now()}`,
+        title: titleInput.value,
+        date: dateInput.value,
+        description: descriptionInput.value,
+    };
+    
+    if (dataArrIndex === -1) {
+        taskData.unshift(taskObj);
+    }
+}
+
+const updateTaskContainer = () => {
+    taskData.forEach(
+        ({ id, title, date, description }) => {
+            (tasksContainer.innerHTML += `
+            <div class="task" id="${id}">
+              <p><strong>Title:</strong> ${title}</p>
+              <p><strong>Date:</strong> ${date}</p>
+              <p><strong>Description:</strong> ${description}</p>
+              <button type="button" class="btn">Edit</button>
+              <button type="button" class="btn">Delete</button>
+            </div>
+          `)
+        }
+      );
+}
 
 const reset = () => {
     titleInput.value = '';
@@ -49,27 +77,6 @@ discardBtn.addEventListener('click', () => {
 taskForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
-    const taskObj = {
-        id: `${titleInput.value.toLowerCase().split(' ').join('-')}-${Date.now()}`,
-        title: titleInput.value,
-        date: dateInput.value,
-        description: descriptionInput.value,
-    };
     
-    if (dataArrIndex === -1) {
-        taskData.unshift(taskObj);
-    }
-
-    taskData.forEach(({ id, title, date, description }) => {
-        tasksContainer.innerHTML += `
-        <div class="task" id="${id}"></div>
-        <p><strong>Title: </strong>${title}</p>
-        <p><strong>Date: </strong>${date}</p>
-        <p><strong>Description: </strong> ${description}</p>
-        <button type="button" class="btn">Edit</button>
-        <button type="button" class="btn">Delete</button>
-        `;
-    }); 
     reset();
 });
