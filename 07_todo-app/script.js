@@ -52,6 +52,10 @@ buttonEl.parentElement.remove();
 taskData.splice(dataArrIndex, 1);
 }
 
+const editTask = (buttonEl) => {
+    
+}
+
 const reset = () => {
     titleInput.value = '';
     dateInput.value = '';
