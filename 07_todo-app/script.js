@@ -41,6 +41,8 @@ const updateTaskContainer = () => {
           `)
         }
       );
+      updateTaskContainer();
+      reset();
 }
 
 const reset = () => {
