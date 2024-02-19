@@ -46,6 +46,10 @@ const updateTaskContainer = () => {
       reset();
 }
 
+const deleteTask = (buttonEl) => {
+
+}
+
 const reset = () => {
     titleInput.value = '';
     dateInput.value = '';
