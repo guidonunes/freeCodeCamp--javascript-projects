@@ -12,7 +12,8 @@ const decimalToBinary = (input) => {
         const remainder = input % 2;
         
         if(input === 0){
-            
+            result.innerText = '0';
+            return
         }
 
         inputs.push(input);
