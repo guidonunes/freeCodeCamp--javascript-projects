@@ -4,11 +4,11 @@ const result = document.getElementById('result');
 
 const decimalToBinary = (input) => {
     let binary = '';
-    result.innerText = binary;
-
+    
     while (input > 0) {
-        input = 0;
-      }
+        input = Math.floor(input/2);
+    }
+    result.innerText = binary;
 }
 
 const checkUserInput = () => {
