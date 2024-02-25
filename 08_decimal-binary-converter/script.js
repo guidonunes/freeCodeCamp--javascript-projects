@@ -6,7 +6,9 @@ const b = () => {
     return "is " + c();
 }
 
-
+const c = () => {
+    return "awesome!"
+}
 const numberInput = document.getElementById('number-input');
 const convertBtn = document.getElementById('convert-btn');
 const result = document.getElementById('result');
