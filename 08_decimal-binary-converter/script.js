@@ -6,7 +6,7 @@ const result = document.getElementById('result');
 
 const decimalToBinary = (input) => {
    
-}
+};
 
 const checkUserInput = () => {
     if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
