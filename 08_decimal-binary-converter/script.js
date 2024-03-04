@@ -3,7 +3,6 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-    //check base case
   if (input === 0 || input === 1) {
     return String(input);
   } else {
@@ -11,18 +10,20 @@ const decimalToBinary = (input) => {
   }
 };
 
-//animation to understand what's happening under the hood
 const showAnimation = () => {
-    if (parseInt(numberInput.value) === 5) {
-        showAnimation();
-        return;
-    }
-}
+
+};
 
 const checkUserInput = () => {
-  const inputInt = parseInt(numberInput.value);  
+  const inputInt = parseInt(numberInput.value);
+
   if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
     alert("Please provide a decimal number");
+    return;
+  }
+
+  if (parseInt(numberInput.value) === 5) {
+    showAnimation();
     return;
   }
 
