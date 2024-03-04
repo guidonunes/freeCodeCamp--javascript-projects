@@ -33,7 +33,7 @@ const decimalToBinary = (input) => {
 
     // animation to check what's happening under the hood
 const showAnimation = () => {
-    
+    result.innerText = "Call Stack Animation";
 };
 
 const checkUserInput = () => {
