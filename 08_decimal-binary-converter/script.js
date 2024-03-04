@@ -5,10 +5,15 @@ const result = document.getElementById("result");
     //array of objects to store data for each frame of the animation
     const animationData = [
         {
-            inputVal:5,
-            marginTop:300,
-            addElDelay:1000,
-          }
+        inputVal:5,
+        marginTop:300,
+        addElDelay:1000,
+        },
+        {
+        inputVal: 2,
+        marginTop: -200,
+        addElDelay: 1500
+        }
     ];
 
 const decimalToBinary = (input) => {
