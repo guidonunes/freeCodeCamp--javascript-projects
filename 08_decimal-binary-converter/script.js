@@ -21,7 +21,7 @@ const animationContainer = document.getElementById('animation-container');
         addElDelay: 2000,
         msg: 'decimalToBinary(1) returns "1" (base case) and gives that value to the stack below. Then it pops off the stack.',
         showMsgDelay: 5000,
-        removeElDelay: 1000
+        removeElDelay: 10000
         }
     ];
 
