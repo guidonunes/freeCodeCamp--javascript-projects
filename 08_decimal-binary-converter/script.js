@@ -3,6 +3,7 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
+    //check base case
   if (input === 0 || input === 1) {
     return String(input);
   } else {
@@ -10,7 +11,11 @@ const decimalToBinary = (input) => {
   }
 };
 
+    // animation to check what's happening under the hood
 const showAnimation = () => {
+    console.log("free");
+    console.log("Code");
+    console.log("Camp");
 
 };
 
@@ -23,6 +28,7 @@ const checkUserInput = () => {
   }
 
   if (inputInt === 5) {
+    //animation function call
     showAnimation();
     return;
   }
