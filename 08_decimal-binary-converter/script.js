@@ -1,32 +1,32 @@
-const numberInput = document.getElementById('number-input');
-const convertBtn = document.getElementById('convert-btn');
-const result = document.getElementById('result');
-
-
+const numberInput = document.getElementById("number-input");
+const convertBtn = document.getElementById("convert-btn");
+const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-   //check for base case
-    if (input === 0 || input === 1) {
+    //check base case
+  if (input === 0 || input === 1) {
     return String(input);
-   } else {
-    return decimalToBinary(Math.floor(input/2)) + (input % 2);
-   }
+  } else {
+    return decimalToBinary(Math.floor(input / 2)) + (input % 2);
+  }
 };
 
+
+
 const checkUserInput = () => {
-    if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
-        alert("Please provide a decimal number");
-        return;
-    }
-   decimalToBinary(parseInt(numberInput.value));
-   result.textContent = decimalToBinary();
-   numberInput.value = '';
-}
+  if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
+    alert("Please provide a decimal number");
+    return;
+  }
 
+  result.textContent = decimalToBinary(parseInt(numberInput.value));
+  numberInput.value = "";
+};
 
-convertBtn.addEventListener('click', (checkUserInput));
-numberInput.addEventListener('keydown', (e) =>{
-    if (e.key === 'Enter') {
-        checkUserInput();
-    }
+convertBtn.addEventListener("click", checkUserInput);
+
+numberInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    checkUserInput();
+  }
 });
