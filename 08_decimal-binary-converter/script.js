@@ -38,7 +38,7 @@ const showAnimation = () => {
     animationData.forEach((obj) => {
     // set up the delay to add elements to the DOM    
         setTimeout(() => {
-
+            animationContainer.innerHTML += ``;
         }, obj.addElDelay)
     })
 };
