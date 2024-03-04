@@ -18,7 +18,8 @@ const animationContainer = document.getElementById('animation-container');
         {
         inputVal: 1,
         marginTop: -200,
-        addElDelay: 2000
+        addElDelay: 2000,
+        msg: ''
         }
     ];
 
