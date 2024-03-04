@@ -38,7 +38,9 @@ const showAnimation = () => {
     animationData.forEach((obj) => {
     // set up the delay to add elements to the DOM    
         setTimeout(() => {
-            animationContainer.innerHTML += `<p id='${inputVal}' style = 'margin-top:${obj.marginTop}px;' class = 'animation-frame'></p>`;
+            animationContainer.innerHTML += `<p id='${obj.inputVal}' style = 'margin-top:${obj.marginTop}px;' class ='animation-frame'>
+            decimalToBinary(${obj.inputVal})
+            </p>`;
         }, obj.addElDelay)
     })
 };
