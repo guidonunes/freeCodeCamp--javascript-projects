@@ -36,7 +36,10 @@ const showAnimation = () => {
     result.innerText = "Call Stack Animation";
     // loop through animationData array
     animationData.forEach((obj) => {
-  
+    // set up the delay to add elements to the DOM    
+        setTimeout(() => {
+
+        }, obj.addElDelay)
     })
 };
 
