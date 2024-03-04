@@ -2,6 +2,15 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
+    //array of objects to store data for each frame of the animation
+    const animationData = [
+        {
+            inputVal:5,
+            marginTop:300,
+            addElDelay:1000,
+          }
+    ];
+
 const decimalToBinary = (input) => {
     //check base case
   if (input === 0 || input === 1) {
@@ -19,7 +28,9 @@ const showAnimation = () => {
     setTimeout(() => {
         console.log("Code");
       }, 1000);    
-    console.log("Camp");
+      setTimeout(() => {
+        console.log("Camp");
+      }, 1500)
 };
 
 const checkUserInput = () => {
