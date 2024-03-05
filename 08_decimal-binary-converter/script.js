@@ -52,6 +52,7 @@ const showAnimation = () => {
             </p>`;
         }, obj.addElDelay);
 
+    //update the paragraphs with the msg text
         setTimeout(() => {
 
         }, obj.showMsgDelay);
