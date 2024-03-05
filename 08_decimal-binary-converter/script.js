@@ -54,7 +54,8 @@ const showAnimation = () => {
 
     //update the paragraphs with the msg text
         setTimeout(() => {
-
+    // select the element with the id attribute with the value of the inputVal property of the current object.
+            let paragraphElement = document.getElementById(obj.inputVal);
         }, obj.showMsgDelay);
     });
 };
