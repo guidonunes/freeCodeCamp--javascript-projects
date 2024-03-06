@@ -11,9 +11,11 @@ const sortInputArray = (event) => {
     inputValues.map((dropdown) => Number(dropdown.value))
 }
 
+//display the sorted array on the screen
 const updateUI = (array = []) => {
     array.forEach((num, i) => {
         const outputValueNode = document.getElementById(`output-value-${i}`);
+        outputValueNode.innerText = num;
     });
 }
 
