@@ -5,7 +5,8 @@ const sortInputArray = (event) => {
     //avoid default submission of the numbers associated with the form element
     event.preventDefault();
 
-    const inputValues = document.getElementsByClassName('values-dropdown');
+    //convert the input values to an array by using the spread operator
+    const inputValues = [...document.getElementsByClassName('values-dropdown')];
 }
 
 
