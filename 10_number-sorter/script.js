@@ -5,3 +5,6 @@ const sortInputArray = (event) => {
     //avoid default submission of the numbers associated with the form element
     event.preventDefault();
 }
+
+
+sortButton.addEventListener('click', sortInputArray);
