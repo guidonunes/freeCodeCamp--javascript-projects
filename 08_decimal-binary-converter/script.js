@@ -57,6 +57,10 @@ const showAnimation = () => {
     // select the element with the id attribute with the value of the inputVal property of the current object.
             document.getElementById(obj.inputVal).textContent = obj.msg;
         }, obj.showMsgDelay);
+
+        setTimeout(() => {
+          
+        }, obj.removeElDelay);
     });
 };
 
