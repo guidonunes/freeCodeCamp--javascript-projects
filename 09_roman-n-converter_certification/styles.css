@@ -11,3 +11,14 @@
   --empire-red: #8E001C;
   --empire-yellow: #FFB300;
 }
+
+body {
+    background-color: var(--empire-red);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: var(--empire-yellow);
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
