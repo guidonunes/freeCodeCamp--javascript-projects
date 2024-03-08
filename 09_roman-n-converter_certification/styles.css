@@ -60,3 +60,13 @@ h1 {
     font-size: 2rem;
     text-align: center;
 }
+
+@media screen and (min-width: 500px) {
+    .input-container {
+        flex-direction: row;
+    }
+
+    #result {
+        max-width: 460px;
+    }
+}
