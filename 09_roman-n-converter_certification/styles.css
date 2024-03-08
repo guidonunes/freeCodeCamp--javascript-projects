@@ -8,7 +8,7 @@
 
 :root {
   --light-grey: #f5f6f7;
-  --empire-red: #8E001C;
+  --empire-red: #a90909;
   --empire-yellow: #FFB300;
 }
 
@@ -22,3 +22,19 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 20px 0;
+}
+
+.input-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
