@@ -28,7 +28,7 @@ const bubbleSort = (array) => {
 //check if the current element is larger than the next element            
             if (array[j] > array[j+1]) {
                 //swap the elements
-                let temp = array[j];
+                const temp = array[j];
                 array[j] = array[j+1];
                 array[j+1] = temp;
             }
