@@ -7,7 +7,7 @@ const sortInputArray = (event) => {
 
     //convert the input values to an array by using the spread operator
     const inputValues = [...document.getElementsByClassName('values-dropdown')].map((dropdown) => Number(dropdown.value));
-    const sortedValues = bubbleSort(inputValues)
+    const sortedValues = selectionSort(inputValues)
 
     updateUI(sortedValues);
 
@@ -38,7 +38,7 @@ const bubbleSort = (array) => {
 }
 
 const selectionSort = (array) => {
-    
+
 }
 
 
