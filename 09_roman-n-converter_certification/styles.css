@@ -38,7 +38,7 @@ h1 {
     align-items: center;
 }
 
-.convert-btn {
+#convert-btn {
     background-color: var(--empire-yellow);
     cursor: pointer;
     border: none;
