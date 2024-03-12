@@ -29,7 +29,7 @@ h1 {
     margin: 20px 0;
 }
 
-.input-container {
+#input-container {
     margin: 10px 0;
     display: flex;
     flex-direction: column;
