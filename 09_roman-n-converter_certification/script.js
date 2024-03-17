@@ -3,6 +3,6 @@ const numberInput = document.getElementById('number');
 const output = document.getElementById('output');
 
 convertBtn.addEventListener("click", () =>{
-    
+    const inputValue = parseInt(numberInput.value.trim())
 })
 
