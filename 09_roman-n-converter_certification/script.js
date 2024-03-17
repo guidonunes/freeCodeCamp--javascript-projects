@@ -16,9 +16,13 @@ const numerals = [
     {char:"V", value: 5},
     {char:"IV", value: 4},
     {char:"I", value: 1},
-]
+];
 
 
+//conversion function for valid input
+const convertToRoman = (num) => {
+
+};
 
 
 convertBtn.addEventListener("click", () =>{
