@@ -9,6 +9,7 @@ convertBtn.addEventListener("click", () =>{
         case inputValue === -1:
             output.textContent = "Please enter a number greater than or equal to 1."
             break;
+        cae
     }
 })
 
