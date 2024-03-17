@@ -7,9 +7,17 @@ convertBtn.addEventListener("click", () =>{
 
     switch(true) {
         case inputValue === -1:
-            output.textContent = "Please enter a number greater than or equal to 1."
+            output.textContent = "Please enter a number greater than or equal to 1.";
             break;
-        cae
+        case inputValue >= 4000:
+            output.textContent = "Please enter a number less than or equal to 3999";
+            break;
+        case isNaN(inputValue) || inputValue < 1:
+            output.texContent = "Please enter a valid number.";
+            break;
+        default:
+            // Call conversion function here if input is valid
+        break;
     }
 })
 
