@@ -54,7 +54,8 @@ const selectionSort = (array) => {
 
 const insertionSort = (array) => {
     for (let i = 1; i < array.length; i++) {
-    
+        const currValue = array[i];
+        let j = i - 1;
     }
 };
 
