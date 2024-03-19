@@ -2,26 +2,11 @@ const convertBtn = document.getElementById('convert-btn');
 const numberInput = document.getElementById('number');
 const output = document.getElementById('output');
 
-const numerals = [
-    {char:"M", value: 1000},
-    {char:"CM", value: 900},
-    {char:"D", value: 500},
-    {char:"CD", value: 400},
-    {char:"C", value: 100},
-    {char:"XC", value: 90},
-    {char:"L", value: 50},
-    {char:"XL", value: 40},
-    {char:"X", value: 10},
-    {char:"IX", value: 9},
-    {char:"V", value: 5},
-    {char:"IV", value: 4},
-    {char:"I", value: 1},
-];
 
 
 //conversion function for valid input
 const convertToRoman = (num) => {
-
+//TODO: Add conversion function 
 };
 
 
