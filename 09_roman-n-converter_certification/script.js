@@ -21,6 +21,14 @@ const convertToRoman = (num) => {
         IV: 4, 
         I: 1,
     };
+    let convertedNumber = '';
+
+    for (let i of Object.keys(numerals)) {
+        const value = Math.floor(num/ numerals[i]);
+        num -= value * numerals[i];
+        convertedNumber += i.repeat(value);
+    }
+    return convertedNumber;
 };
 
 
@@ -38,10 +46,11 @@ convertBtn.addEventListener("click", () =>{
             output.textContent = "Please enter a number less than or equal to 3999";
             break;
         case isNaN(inputValue) || inputValue < 1:
-            output.texContent = "Please enter a valid number.";
+            output.textContent = "Please enter a valid number.";
             break;
         default:
             // Call conversion function here if input is valid
+            convertToRoman(num);    
         break;
     }
 })
