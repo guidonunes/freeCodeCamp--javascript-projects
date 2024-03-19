@@ -35,7 +35,7 @@ const bubbleSort = (array) => {
         }
     }
     return array;
-}
+};
 
 const selectionSort = (array) => {
     for (let i = 0; i < array.length; i++) {
@@ -50,7 +50,10 @@ const selectionSort = (array) => {
         array[minIndex] = temp
     }
     return array;
-}
+};
 
+const insertionSort = (array) => {
+
+};
 
 sortButton.addEventListener('click', sortInputArray);
