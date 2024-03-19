@@ -50,7 +50,7 @@ convertBtn.addEventListener("click", () =>{
             break;
         default:
             // Call conversion function here if input is valid
-            convertToRoman(inputValue);    
+            output.textContent = convertToRoman(inputValue);    
         break;
     }
 })
