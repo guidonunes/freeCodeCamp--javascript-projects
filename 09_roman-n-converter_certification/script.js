@@ -32,7 +32,7 @@ const convertToRoman = (num) => {
 };
 
 
-convertBtn.addEventListener("click", () =>{
+const handleConversion = () => {
     const inputValue = parseInt(numberInput.value.trim());
 //Check if the input is valid or not
     switch(true) {
@@ -53,5 +53,5 @@ convertBtn.addEventListener("click", () =>{
             output.textContent = convertToRoman(inputValue);    
         break;
     }
-})
+};
 
