@@ -2,8 +2,6 @@ const convertBtn = document.getElementById('convert-btn');
 const numberInput = document.getElementById('number');
 const output = document.getElementById('output');
 
-
-
 //conversion function for valid input
 const convertToRoman = (num) => {
     const numerals = {
@@ -55,7 +53,17 @@ const handleConversion = () => {
     }
 };
 
+// event listener for the button click
 convertBtn.addEventListener("click", () => {
     handleConversion();
+});
+
+
+// event listener for the enter key press on the input field
+numberInput.addEventListener("keyup", (e) => {
+    if(e.key == "Enter") {
+        e.preventDefault();
+        handleConversion();
+    }
 });
 
