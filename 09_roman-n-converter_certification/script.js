@@ -55,3 +55,7 @@ const handleConversion = () => {
     }
 };
 
+convertBtn.addEventListener("click", () => {
+    handleConversion();
+});
+
