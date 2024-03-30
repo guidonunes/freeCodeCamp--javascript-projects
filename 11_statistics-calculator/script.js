@@ -2,7 +2,7 @@
 const getMean = (array) => array.reduce((acc,el)=>acc +el, 0)/array.length;
 
 //calculate median logic
-const getMedian = (array) => {}
+const getMedian = (array) => {const sorted = array.sort()}
 
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
