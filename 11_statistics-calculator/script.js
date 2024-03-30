@@ -1,6 +1,6 @@
 //calculate mean logic
 const getMean = (array) => {
-
+    const sum = array.reduce()
 }
 
 const calculate = () => {
