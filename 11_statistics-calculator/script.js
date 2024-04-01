@@ -16,5 +16,6 @@ const calculate = () => {
     const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
     const mean = getMean(numbers);
     const median = getMedian(numbers);
+    document.querySelector('#median').textContent = median;
     document.querySelector('#mean').textContent = mean;
 }
