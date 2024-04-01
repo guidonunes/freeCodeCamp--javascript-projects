@@ -12,4 +12,7 @@ const calculate = () => {
     const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
     const mean = getMean(numbers);
     document.querySelector('#mean').textContent = mean;
+    const median = array.length %2 === 0 ?
+    getMean([sorted[array.length/ 2], sorted[array.length/ 2 -1]]) :
+    sorted[Math.floor(array.length/2)];
 }
