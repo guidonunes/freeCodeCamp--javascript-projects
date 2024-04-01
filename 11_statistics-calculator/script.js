@@ -12,7 +12,7 @@ const getMedian = (array) => {
 
 //get the number that appears most often in the list
 const getMode = (array) => {
-    
+    const counts = {}
 }
 
 const calculate = () => {
