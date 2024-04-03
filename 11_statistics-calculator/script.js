@@ -24,6 +24,8 @@ const getMode = (array) => {
     const highest = Object.keys(counts).sort((a,b) => {
         return counts[b] - counts[a]
     })[0];
+    
+    const mode = Object.keys(counts);
 }
 
 const calculate = () => {
