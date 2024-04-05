@@ -34,6 +34,7 @@ const getRange = (array) => {
 //calculate variance 
 const getVariance = (array) => {
     const mean = getMean(array);
+    const differences = array.map((el) => el - mean);
 }
 
 //calculate
