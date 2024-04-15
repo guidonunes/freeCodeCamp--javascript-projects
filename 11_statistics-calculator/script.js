@@ -38,6 +38,9 @@ const getVariance = (array) => {
     const squaredDifferences = differences.map((el) => {
        return el ** 2;
     });
+    const sumSquaredDifferences = squaredDifferences.reduce((acc, el) => {
+        return acc + el;
+    }, 0);
 }
 
 //calculate
