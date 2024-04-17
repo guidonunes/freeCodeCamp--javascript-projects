@@ -52,6 +52,7 @@ const calculate = () => {
     const mode = getMode(numbers);
     const range = getRange(numbers);
     const variance = getVariance(numbers);
+    document.querySelector('#variance').textContent = variance;
     document.querySelector('#range').textContent = range;
     document.querySelector('#mode').textContent = mode;
     document.querySelector('#median').textContent = median;
