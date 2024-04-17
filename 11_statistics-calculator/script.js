@@ -37,7 +37,7 @@ const getVariance = (array) => {
     const variance = array.reduce((acc,el) =>{
         const difference = el - mean;
         const squared = difference ** 2;
-
+        return acc + squared;
     }, 0);
 }
 
