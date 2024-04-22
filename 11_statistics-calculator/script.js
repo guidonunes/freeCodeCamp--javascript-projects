@@ -43,7 +43,7 @@ const getVariance = (array) => {
 }
 
 const getStandardDeviation = (array) => {
-    
+    const variance = getVariance(array);
 }
 
 //calculate
