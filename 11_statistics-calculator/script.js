@@ -3,7 +3,7 @@ const getMean = (array) => array.reduce((acc,el)=>acc +el, 0)/array.length;
 
 //calculate median logic
 const getMedian = (array) => {
-    const sorted = array.sort((a,b) => a - b);
+    const sorted = array.slice().sort((a,b) => a - b);
     const median = array.length %2 === 0 ?
     getMean([sorted[array.length/ 2], sorted[array.length/ 2 -1]]) :
     sorted[Math.floor(array.length/2)];
@@ -59,7 +59,7 @@ const calculate = () => {
     const range = getRange(numbers);
     const variance = getVariance(numbers);
     const standardDeviation = getStandardDeviation(numbers);
-    document.querySelector('#standardDeviation').textContent = standardDeviation
+    document.querySelector('#standardDeviation').textContent = standardDeviation;
     document.querySelector('#variance').textContent = variance;
     document.querySelector('#range').textContent = range;
     document.querySelector('#mode').textContent = mode;
