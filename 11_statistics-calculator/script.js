@@ -42,6 +42,10 @@ const getVariance = (array) => {
     return variance;
 }
 
+const getStandardDeviation = (array) => {
+    
+}
+
 //calculate
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
