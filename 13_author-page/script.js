@@ -8,7 +8,7 @@ let authorDataArr = [];
 fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
   .then((res) => res.json())
   .then((data) => {
-
+    const authorDataArr = data
   })
   .catch((err) => console.error(`There was an error: ${err}`))
 
