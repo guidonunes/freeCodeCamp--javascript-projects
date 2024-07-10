@@ -19,6 +19,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
         <div id=${index} class ="user-card">
           <h2 class="author-name">${author}</h2>
           <img class="user-img" src=${image} alt="${author} avatar"/>
+          <p class="bio">${bio}</p>
         </div>
       `;
     })
