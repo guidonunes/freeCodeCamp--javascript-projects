@@ -20,7 +20,8 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     const endingIndex += 8;
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     if (authorDataArr.length <= endingIndex) {
-
+      disabled = true;
+      loadMoreBtn.textContent = "No more authors to load";
     };
   };
 
