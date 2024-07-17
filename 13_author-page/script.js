@@ -20,8 +20,8 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     const endingIndex += 8;
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     if (authorDataArr.length <= endingIndex) {
-      disabled = true;
-      loadMoreBtn.textContent = "No more authors to load";
+      loadMoreBtn.disabled = true;
+      loadMoreBtn.textContent = "No more data to load";
     };
   };
 
@@ -31,6 +31,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
         <div id=${index} class ="user-card">
           <h2 class="author-name">${author}</h2>
           <img class="user-img" src=${image} alt="${author} avatar"/>
+          <div class="purple-divider"></div>
           <p class="bio">${bio}</p>
           <a class="author-link" href=${url} target=_blank>${author}'s author page</a>
         </div>
