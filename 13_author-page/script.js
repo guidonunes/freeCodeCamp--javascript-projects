@@ -16,8 +16,8 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
   });
 
   const fetchMoreAuthors = () => {
-    const startingIndex += 8;
-    const endingIndex += 8;
+     startingIndex += 8;
+     endingIndex += 8;
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     if (authorDataArr.length <= endingIndex) {
       loadMoreBtn.disabled = true;
