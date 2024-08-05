@@ -16,3 +16,7 @@ const fetchData = async () => {
 };
 
 fetchData();
+
+const showLatestPosts = (data) => {
+
+}
