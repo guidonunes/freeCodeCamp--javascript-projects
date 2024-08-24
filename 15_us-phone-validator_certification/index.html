@@ -12,11 +12,12 @@
     <h1 class="text-center">Telephone Number Validator</h1>
     <div class="w-100">
       <label for="phone">Enter a Phone Number: </label>
-      <input type="text" id="phone" class="form-control" placeholder="Enter Phone Number">
+      <input maxlength="20"  type="text" id="user-input" class="form-control" placeholder="Enter Phone Number">
+      <div id="results-div"></div>
     </div>
-    <div class="w-100 align -center">
-      <button class="btn btn-primary mt-3" onclick="validatePhone()">Check</button>
-      <button class="btn btn-danger mt-3" onclick="clearPhone()">Clear</button>
+    <div class="phone-footer w-100 align -center">
+      <button  id="check-btn" class="btn btn-primary mt-3" onclick="validatePhone()">Check</button>
+      <button id="clear-btn" class="btn btn-danger mt-3" onclick="clearPhone()">Clear</button>
     </div>
 
   </div>
