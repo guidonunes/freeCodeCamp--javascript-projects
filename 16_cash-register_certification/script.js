@@ -52,6 +52,13 @@ const checkCashRegister = () => {
     ["PENNY", 0.01]
   ];
 
+  let totalCid = cid.reduce((acc, curr) => acc + curr[1], 0);
+
+  if (totalCid < change) {
+    changeDue.innerHTML = '<p class="text-danger">Status: INSUFFICIENT_FUNDS</p>';
+    return;
+  }
+
   for (let i = 0; i < currencyUnits.length; i++) {
     let coinName = currencyUnits[i][0];
     let coinValue = currencyUnits[i][1];
@@ -73,7 +80,7 @@ const checkCashRegister = () => {
   }
 
   if (change > 0) {
-    changeDue.innerHTML = '<p class="text-danger">Insufficient funds in the cash drawer</p>';
+    changeDue.innerHTML = '<p class="text-danger">Status: INSUFFICIENT_FUNDS</p>';
   } else {
     changeDue.innerHTML = `<p class="text-success">Status: OPEN ${changeArr.join(' ')}</p>`;
   }
