@@ -4,8 +4,6 @@ const purchaseBtn = document.getElementById('purchase-btn');
 const priceScreen = document.getElementById('price-screen');
 const cashDrawerDisplay = document.getElementById('cash-drawer-display');
 
-
-
 let price = 3.87;
 let cid = [
   ['PENNY', 1.01],
@@ -20,21 +18,67 @@ let cid = [
 ];
 
 const displayCashDrawer = () => {
-  priceScreen.innerHTML = `<h3>Price: $${price.toFixed(2)}</h3>`;
+  priceScreen.innerHTML = `<h6>Price: $${price.toFixed(2)}</h6>`;
 
   // Display cash drawer
-  cashDrawerDisplay.innerHTML = '<h3>Cash Drawer Contents: </h3>';
+  cashDrawerDisplay.innerHTML = '<h6>Cash Drawer Contents: </h6>';
   cid.forEach(([denomination, amount]) => {
     cashDrawerDisplay.innerHTML += `<p>${denomination}: $${amount.toFixed(2)}</p>`;
   });
 };
 
-const checkCashRegister = (price, cash, cid) => {
-  if (price > cash) {
-    changeDue.innerHTML = '<p class="text-danger">Customer does not have enough money to purchase the item</p>';
+const checkCashRegister = () => {
+  let customerCash = parseFloat(cash.value);
+  let change = customerCash - price;
+
+  if (price > customerCash) {
+    alert("Customer does not have enough money to purchase the item");
+    return;
+  } else if (price === customerCash) {
+    changeDue.innerHTML = '<p class="text-success">No change due - customer paid with exact cash</p>';
     return;
   }
-}
 
+  let changeArr = [];
+  const currencyUnits = [
+    ["ONE HUNDRED", 100],
+    ["TWENTY", 20],
+    ["TEN", 10],
+    ["FIVE", 5],
+    ["ONE", 1],
+    ["QUARTER", 0.25],
+    ["DIME", 0.1],
+    ["NICKEL", 0.05],
+    ["PENNY", 0.01]
+  ];
+
+  for (let i = 0; i < currencyUnits.length; i++) {
+    let coinName = currencyUnits[i][0];
+    let coinValue = currencyUnits[i][1];
+    let coinIndex = cid.findIndex(([name]) => name === coinName);
+    let coinAmount = cid[coinIndex][1];
+    let amountFromDrawer = 0;
+
+    while (change >= coinValue && coinAmount >= coinValue) {
+      change -= coinValue;
+      change = Math.round(change * 100) / 100;
+      coinAmount -= coinValue;
+      amountFromDrawer += coinValue;
+    }
+
+    if (amountFromDrawer > 0) {
+      changeArr.push(`${coinName}: $${amountFromDrawer.toFixed(2)}`);
+      cid[coinIndex][1] = coinAmount; // Update the cash drawer with the remaining amount
+    }
+  }
+
+  if (change > 0) {
+    changeDue.innerHTML = '<p class="text-danger">Insufficient funds in the cash drawer</p>';
+  } else {
+    changeDue.innerHTML = `<p class="text-success">Status: OPEN ${changeArr.join(' ')}</p>`;
+  }
+};
 
 displayCashDrawer();
+
+purchaseBtn.addEventListener('click', checkCashRegister);
