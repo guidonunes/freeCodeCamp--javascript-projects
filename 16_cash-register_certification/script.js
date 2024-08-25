@@ -1,6 +1,9 @@
 const changeDue = document.getElementById('change-due');
 const cash = document.getElementById('cash');
 const purchaseBtn = document.getElementById('purchase-btn');
+const priceScreen = document.getElementById('price-screen');
+const cashDrawerDisplay = document.getElementById('cash-drawer-display');
+
 
 
 let price = 1.87;
@@ -15,3 +18,10 @@ let cid = [
   ['TWENTY', 60],
   ['ONE HUNDRED', 100]
 ];
+
+const checkCashRegister = (price, cash, cid) => {
+  if (price > cash) {
+    changeDue.innerHTML = '<p class="text-danger">Customer does not have enough money to purchase the item</p>';
+    return;
+  }
+}
