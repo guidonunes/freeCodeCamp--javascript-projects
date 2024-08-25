@@ -55,6 +55,20 @@ const checkCashRegister = () => {
 
   let totalCid = cid.reduce((acc, curr) => acc + curr[1], 0);
 
+  // Handle the case where total cash in drawer equals the change due
+  if (totalCid === change) {
+    cid.forEach(([name, amount], index) => {
+      if (amount > 0) {
+        changeArr.push(`${name}: $${amount.toFixed(2)}`);
+        cid[index][1] = 0; // Empty the cash drawer
+      }
+    });
+    changeDue.innerHTML = `<p class="text-success">Status: CLOSED ${changeArr.join(' ')}</p>`;
+    cash.value = ''; // Clear the input field
+    displayCashDrawer(); // Update the displayed cash drawer
+    return;
+  }
+
   if (totalCid < change) {
     changeDue.innerHTML = '<p class="text-danger">Status: INSUFFICIENT_FUNDS</p>';
     cash.value = ''; // Clear the input field
@@ -81,12 +95,8 @@ const checkCashRegister = () => {
     }
   }
 
-  totalCid = cid.reduce((acc, curr) => acc + curr[1], 0);
-
   if (change > 0) {
     changeDue.innerHTML = '<p class="text-danger">Status: INSUFFICIENT_FUNDS</p>';
-  } else if (totalCid === 0) {
-    changeDue.innerHTML = `<p class="text-success">Status: CLOSED ${changeArr.join(' ')}</p>`;
   } else {
     changeDue.innerHTML = `<p class="text-success">Status: OPEN ${changeArr.join(' ')}</p>`;
   }
