@@ -36,6 +36,7 @@ const checkCashRegister = () => {
     return;
   } else if (price === customerCash) {
     changeDue.innerHTML = '<p class="text-success">No change due - customer paid with exact cash</p>';
+    cash.value = ''; // Clear the input field
     return;
   }
 
@@ -56,6 +57,7 @@ const checkCashRegister = () => {
 
   if (totalCid < change) {
     changeDue.innerHTML = '<p class="text-danger">Status: INSUFFICIENT_FUNDS</p>';
+    cash.value = ''; // Clear the input field
     return;
   }
 
@@ -68,7 +70,7 @@ const checkCashRegister = () => {
 
     while (change >= coinValue && coinAmount >= coinValue) {
       change -= coinValue;
-      change = Math.round(change * 100) / 100;
+      change = Math.round(change * 100) / 100; // Avoid floating point issues
       coinAmount -= coinValue;
       amountFromDrawer += coinValue;
     }
@@ -79,11 +81,21 @@ const checkCashRegister = () => {
     }
   }
 
+  totalCid = cid.reduce((acc, curr) => acc + curr[1], 0);
+
   if (change > 0) {
     changeDue.innerHTML = '<p class="text-danger">Status: INSUFFICIENT_FUNDS</p>';
+  } else if (totalCid === 0) {
+    changeDue.innerHTML = `<p class="text-success">Status: CLOSED ${changeArr.join(' ')}</p>`;
   } else {
     changeDue.innerHTML = `<p class="text-success">Status: OPEN ${changeArr.join(' ')}</p>`;
   }
+
+  // Clear the input field for the next transaction
+  cash.value = '';
+
+  // Update and display the cash drawer after the transaction
+  displayCashDrawer();
 };
 
 displayCashDrawer();
