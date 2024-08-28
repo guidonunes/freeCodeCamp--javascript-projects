@@ -8,39 +8,43 @@
   <title>Pokedex</title>
 </head>
 <body>
-  <h1 class ="text-center">Pokemon Search App</h1>
+  <h1 class="text-center">Pokemon Search App</h1>
   <div class="container">
     <form role="search" id="search-form">
-      <div>
-        <label for="search-input">Search for Pokémon Name or ID:</label>
+      <div class="mb-3">
+        <label for="search-input" class="form-label">Search for Pokémon Name or ID:</label>
+        <input type="text" name="pokemon" id="search-input" class="form-control" required>
       </div>
-      <input type="text" name="pokemon" id="search-input" required >
       <button type="submit" id="search-button" class="btn btn-primary">Search</button>
     </form>
-    <!--Pokemon Display-->
-    <div class="output">
+
+    <!-- Pokemon Display -->
+    <div class="output mt-4">
       <div class="top-container">
         <div class="name-and-id">
-          <span id="pokemon-name"></span>
-          <span id="pokemon-id"></span>
-          <div class="size">
-            <span id="weight"></span>
+          <span id="pokemon-name" class="fs-4 fw-bold"></span>
+          <span id="pokemon-id" class="fs-5 ms-2"></span>
+          <div class="size mt-2">
+            <span id="weight" class="me-3"></span>
             <span id="height"></span>
           </div>
-          <div id="sprite-container" class="sprite-container">
-
+          <div id="sprite-container" class="sprite-container my-3">
+            <!-- Image goes here -->
           </div>
-          <div id="types">
-            <span class="type electric">electric</span>
+          <div id="types" class="mt-2">
+            <!-- Dynamic types will be displayed here -->
           </div>
         </div>
-        <div class="bottom-container">
-          <table>
-            <tbody>
+        <div class="bottom-container mt-4">
+          <table class="table table-bordered">
+            <caption class="text-center">Base Stats</caption>
+            <thead>
               <tr>
                 <th>Base</th>
                 <th>Stats</th>
               </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td>HP:</td>
                 <td id="hp"></td>
@@ -63,7 +67,7 @@
               </tr>
               <tr>
                 <td>Speed:</td>
-                <td id="speed" class="speed"></td>
+                <td id="speed"></td>
               </tr>
             </tbody>
           </table>
