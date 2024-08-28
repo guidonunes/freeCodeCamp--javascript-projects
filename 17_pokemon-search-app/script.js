@@ -22,9 +22,12 @@ const sanitizeInput = (input) => {
   return input.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
-const searchPokemon = async () => {
+const searchPokemon = async (event) => {
+  event.preventDefault();
   try {
     const sanitizedInput = sanitizeInput(searchInput.value);
+
+    if(!sanitizedInput) return;
 
     const response = await fetch(`${proxyApi}/${sanitizedInput}`);
 
@@ -35,10 +38,10 @@ const searchPokemon = async () => {
 
     const data = await response.json();
 
-    if(!data|| Object.keys(data).length === 0) {
+    if(!data || Object.keys(data).length === 0) {
       alert('Pokemon not found');
     } else {
-      console.log(data);
+      displayPokemonData(data);
     }
   } catch (error) {
     console.error('Error fetching Pokémon data:', error);
