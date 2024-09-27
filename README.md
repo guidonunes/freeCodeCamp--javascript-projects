@@ -6,61 +6,62 @@
 # Project List
 * Each project folder contains its own README.md file with specific details about the project's functionality and objectives. Here's an overview of the projects in this repository:
 
-01_dragon-repeller-game
+1. 01_dragon-repeller-game:
 A simple game where players repel dragons using various strategies.
 
-02_calorie-counter
+2. 02_calorie-counter:
 An app that helps track calorie intake throughout the day.
 
-03_music-player
+3. 03_music-player:
 A web-based music player with basic controls and playlist features.
 
-04_date-formatter
+4. 04_date-formatter:
 A utility for formatting dates in various formats.
 
-05_palindrome-checker_certification
+5. 05_palindrome-checker_certification:
 Checks if a given string is a palindrome.
 
-06_football-cards
+6. 06_football-cards:
 Displays football player cards with interactive features.
 
-07_todo-app
+7. 07_todo-app:
 A simple to-do list app to manage tasks.
 
-08_decimal-binary-converter
+8. 08_decimal-binary-converter:
 Converts numbers between decimal and binary formats.
 
-09_roman-n-converter_certification
+9. 09_roman-n-converter_certification:
 Converts numbers to Roman numerals and vice versa.
 
-10_number-sorter
+10. 10_number-sorter:
 A number sorting tool with different algorithms.
 
-11_statistics-calculator
+11. 11_statistics-calculator:
 A calculator for basic statistics such as mean, median, and mode.
 
-12_shopping-cart
+12. 12_shopping-cart:
 A simple shopping cart application.
 
-13_author-page
+13. 13_author-page:
 A web page that showcases an author's portfolio.
 
-14_leaderboard
+14. 14_leaderboard:
 A leaderboard that ranks players or items based on scores.
 
-15_us-phone-validator_certification
+15. 15_us-phone-validator_certification:
 Validates US phone numbers for correctness.
 
-16_cash-register_certification
+16. 16_cash-register_certification:
 A cash register app that calculates change.
 
-17_pokemon-search-app
+17. 17_pokemon-search-app:
 A Pokémon search app that retrieves data from the Pokémon API.
 
-How to Use
+## How to Use
+
 To explore any of these projects:
 
-Clone the repository:
+* Clone the repository:
 
 ```
 git clone https://github.com/your-username/javascript-algorithms-projects.git
